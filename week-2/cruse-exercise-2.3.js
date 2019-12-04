@@ -7,29 +7,23 @@
 ; my name
 ;===========================================
 */
-/*
-  Expected output:
-
-  FirstName LastName
-  Exercise 2.3
-  Today's Date
-
-  Hello FirstName LastName!
-
-  Hint: Use your personal header display function and
-  refer to page 178 for implementing function properties
-*/
 
 //function properties
 myName.jess = "Jess";
-myName.cruse = "Cruse"
 
 //function
 function myName() {
-  return myName.jess + " " + myName.cruse;
+  return myName.jess;
 }
 
+//Identifying where the fuction is located
+const header = require('./cruse-header.js');
+
+//Using the function to format
+console.log(header.display(myName(), "Cruse", "Exercise 2.3 - Function Properties"));
+
 //output
-console.log("Hello " + myName() + "!");
+console.log("\n");
+console.log("Hello " + myName() + "Cruse!");
 
 //end program
