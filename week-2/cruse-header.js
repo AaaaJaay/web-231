@@ -8,7 +8,7 @@
 ;===========================================
 */
 
-/**
+/*
 * Params: firstName, lastName, assignment
 * Response: output
 * Description: Returns a well-formatted string header
