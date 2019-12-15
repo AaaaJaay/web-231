@@ -7,8 +7,8 @@
 ;===========================================
 */
 
-//Identifying where the fuction is located
-const header = require('./cruse-header.js');
+//Identifying where the function is located
+const header = require('../cruse-header.js/index.js');
 
 //Using the function to format
 console.log(header.display("Jess", "Cruse", "Exercise 2.2 - Header"));
