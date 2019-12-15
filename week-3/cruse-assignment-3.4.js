@@ -39,6 +39,8 @@
     }
 
   //OUTPUT
+    console.log('-- DO THE NUMBERS MATCH GAME --');  //heading for the results
+
     for (var x = 0; x < 10; x++) {  //looping through the comparison of myNumber and a randomly generated number 10 times
 
       secondNumCompare = randomNumber();  //randomly selecting the numbers for comparison
