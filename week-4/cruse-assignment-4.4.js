@@ -4,7 +4,7 @@
 ; Author: Jess Cruse
 ; Date: 19 Dec 2019
 ; Modified By: Jess Cruse
-; Description: This program compares two number and provides error handling for if the numbers match or not
+; Description: This program provides a list of states and checks a state against the list.
 ;===========================================
 */
 
