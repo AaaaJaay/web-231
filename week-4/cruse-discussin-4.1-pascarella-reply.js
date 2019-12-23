@@ -27,19 +27,21 @@ console.log(header.display("Pascal","Pascarella","Discussion Board 4.1 - Arrays"
 console.log("\n") // Line break
 
 
-// Program Start
-
 // Establish Array Movie Names and Run-Times
-var movieMinutes = [121, 124, 131, 136, 142, 140];
-
-var movieName = ['A New Hope', 'The Empire Strikes Back', 'Return of the Jedi', 'The Phantom Menace', 'Attack of the Clones', 'Revenge of the Sith'];
-
-
+var movieMinutes = [
+  ['A New Hope', 121],
+  ['The Empire Strikes Back', 124], //missing a comma separator
+  ['Return of the Jedi', 131], //missing a comma after the bracket
+  ['The Phantom Menace', 136], //missing a comma separator
+  ['Attack of the Clones', 142],  //need to close the ' and add a ,
+  ['Revenge of the Sith', 140] //removing last comma
+];
 // Converts Array Values (in minutes) Into Percentage of 24 Hours
 for (var i = 0; i < movieMinutes.length; i++) {
-  var percentage = ((movieMinutes[i] / 1440) * 100).toFixed();  //removed [1]
-  console.log(movieName[i] + ', ' + movieMinutes[i] + ', ' + percentage + '%');
+  var percentage = ((movieMinutes[i][1] / 1440) * 100).toFixed();
+  movieMinutes[i][2] = percentage + '%';
 }
-
+// Output
+console.log(movieMinutes.join('\n'));
 // Program End
 
