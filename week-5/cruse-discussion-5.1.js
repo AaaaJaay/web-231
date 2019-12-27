@@ -4,7 +4,7 @@
 ; Author: Jess Cruse
 ; Date: 25 Dec 2019
 ; Modified By: Jess Cruse
-; Description: This program provides a list of states and checks a state against the list.
+; Description: simple JavaScript program using a keyed collection array with at least two (2) errors
 ;===========================================
 */
 
