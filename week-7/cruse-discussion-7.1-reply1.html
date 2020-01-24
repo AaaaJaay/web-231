@@ -1,0 +1,54 @@
+<!--
+============================================;
+Title:  7.1;
+Author: Clayton Stacy;
+Date:   23 January 2020;
+Modified By: Jess Cruse
+Description: Discussion, Javascript in Web Browsers, Three errors
+;===========================================
+-->
+
+<!--
+    Expected output:
+    Enter your first and last name and receive an alert upon submit
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Discussion 7.1</title>
+
+  <meta name="author" content="Clayton Stacy">
+  <meta name="revised" content="Clayton Stacy, 1/23/2020">
+  <meta name="description" content="Web 231 Assignment 7.1">
+
+  <script> //moved the script to the head
+
+    //Build function call on submit which assigns first and last name a variable then prints them to an alert box.
+    function submitAction() {
+        var firstName = document.getName.firstName.value;
+        var lastName = document.getName.lastName.value;
+        alert(" Thank you " + firstName + " " + lastName);
+    }
+    </script>
+
+</head>
+
+<body>
+    <h2>Please fill in the form:</h2>
+    <form name="getName" onsubmit="submitAction()">
+        <!--Build form to collect first and last name then add submit button to call submitAction function-->
+        First name:
+        <input type="text" name='firstName'>
+        <br>
+        <br>
+        Last name:
+        <input type="text" name='lastName'>
+        <br>
+        <br>
+        <input type='submit' value='send'>
+    </form>
+</body>
+</html>
+
