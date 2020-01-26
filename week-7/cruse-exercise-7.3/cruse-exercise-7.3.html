@@ -1,0 +1,66 @@
+<!--
+============================================
+; Title: Exercise 7.3 - Client-Side JavaScript
+; Author: Jess Cruse
+; Date: 26 Jan 2020
+; Modified By: Jess Cruse
+; Description: Build an ordered list of five (5) grocery items using document.write()
+; and an HTML table and the innerHTML function.
+;===========================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Exercise 7.3</title>
+    <link rel="stylesheet" href="site.css">
+  </head>
+  <body>
+    <script>
+      document.write("<h1>Shopping List v 1</h1>")
+      document.write("<ol>")
+        document.write("<li>Oranges</li>")
+        document.write("<li>Apples</li>")
+        document.write("<li>Pears</li>")
+        document.write("<li>Limes</li>")
+        document.write("<li>Lemons</li>")
+      document.write("</ol>")
+    </script>
+
+    <div id="list"></div>
+
+    <script>
+      document.getElementById("list").innerHTML = "<h1>Shopping List v 2</h1>" +
+        "<table>" +
+          "<thead>" +
+            "<tr>" +
+              "<th>ID</th>" +
+              "<th>Item</th>" +
+            "</tr>" +
+          "</thead>" +
+          "<tbody>" +
+            "<tr>" +
+              "<td>1</td>" +
+              "<td>Oranges</td>" +
+            "</tr>" +
+            "<tr>" +
+              "<td>2</td>" +
+              "<td>Apples</td>" +
+            "</tr>" +
+            "<tr>" +
+              "<td>3</td>" +
+              "<td>Pears</td>" +
+            "</tr>" +
+            "<tr>" +
+              "<td>4</td>" +
+              "<td>Limes</td>" +
+            "</tr>" +
+            "<tr>" +
+              "<td>5</td>" +
+              "<td>Lemons</td>" +
+            "</tr>" +
+          "</tbody>" +
+        "</table>"
+    </script>
+  </body>
+</html>
