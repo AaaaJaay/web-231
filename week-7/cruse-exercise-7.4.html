@@ -1,0 +1,75 @@
+<!--
+============================================
+; Title: Assignment 7.4 - Inline JavaScript Functions
+; Author: Jess Cruse
+; Date: 26 Jan 2020
+; Modified By: Jess Cruse
+; Description: Build an ordered list of five (5) grocery items using document.write()
+; and an HTML table and the innerHTML function.
+;===========================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Exercise 7.4</title>
+    <link rel="stylesheet" href="site.css"> <!--Linking to my style sheet-->
+  </head>
+  <body>
+
+    <h1>Computer Components</h1>
+
+    <table id="myTable">  <!--creating my table-->
+      <thead>
+        <tr>              <!--setting up row headers-->
+          <th>ID</th>
+          <th>Name</th>
+          <th>Amount</th>
+          <th>Functions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td >1</td>
+          <td>Laptop</td>
+          <td>1,500.99</td>
+          <td>              <!--creating the alerts for the edit and delete options-->
+            <a href="javascript:alert(document.getElementById('myTable').rows[1].cells[0].innerHTML);">Edit</a> | <a href="javascript:alert('Are your sure?');">Delete</a>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Motherboard</td>
+          <td>35.70</td>
+          <td>              <!--creating the alerts for the edit and delete options-->
+            <a href="javascript:alert(document.getElementById('myTable').rows[2].cells[0].innerHTML);">Edit</a> | <a href="javascript:alert('Are your sure?');">Delete</a>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Monitor</td>
+          <td>174.99</td>
+          <td>              <!--creating the alerts for the edit and delete options-->
+            <a href="javascript:alert(document.getElementById('myTable').rows[3].cells[0].innerHTML);">Edit</a> | <a href="javascript:alert('Are your sure?');">Delete</a>
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Mouse</td>
+          <td>13.99</td>
+          <td>              <!--creating the alerts for the edit and delete options-->
+            <a href="javascript:alert(document.getElementById('myTable').rows[4].cells[0].innerHTML);">Edit</a> | <a href="javascript:alert('Are your sure?');">Delete</a>
+          </td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Keyboard</td>
+          <td>14.50</td>
+          <td>              <!--creating the alerts for the edit and delete options-->
+            <a href="javascript:alert(document.getElementById('myTable').rows[5].cells[0].innerHTML);">Edit</a> | <a href="javascript:alert('Are your sure?');">Delete</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
