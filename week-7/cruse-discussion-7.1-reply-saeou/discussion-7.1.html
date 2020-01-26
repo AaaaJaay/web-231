@@ -1,0 +1,48 @@
+<!--
+============================================
+; Title:  joann-assignment-7.1.html
+; Author: Joann Saeou
+; Date:   23 January 2020
+; Modified by: Jess Cruse
+; Description: fix 2 errors in html
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="week7 javascript">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Joann Saeou">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>week 7: JavaScript in html</title>
+
+</head>
+
+<body>
+
+    <h1>week 7: JavaScript in HTML</h1>
+
+    <!--Display date and time-->
+
+    <button type="button" onclick="document.getElementById('click').innerHTML = Date()">
+      Click here to  display  the current Date and Time.</button>
+
+    <p id="click"></p>
+
+    <!--Hide and show the text-->
+
+    <p id="p1">find the two errors Javascript week-7</p>
+
+    <input type="button" value="Hide text"
+      onclick="document.getElementById('p1').style.visibility='hidden'">
+
+    <input type="button" value="Show text"
+      onclick="document.getElementById('p1').style.visibility='visible'">
+
+  </body>
+</html>
