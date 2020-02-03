@@ -1,0 +1,108 @@
+<!--
+============================================
+; Title: Assignment 8.4 - Putting it all together
+; Author: Jess Cruse
+; Date: 2 Feb 2020
+; Modified By: Jess Cruse
+; Description: Using the starter code, complete the following:
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Meta Tags-->
+    <meta charset="UTF-8">
+
+    <title>Assignment 8.4 - Putting it all together</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- style references -->
+    <link rel="stylesheet" href="site.css"> <!--Linking to my style sheet-->
+
+    <style type="text/css">
+      #employee tbody tr:hover {
+        cursor: pointer;
+        background-color: #ffff99;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <div id="emps"></div>
+
+    <script type="text/javascript">
+      // Create and populate an array of five (5) employee objects.
+      function employee(id, firstName, lastName, title) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.title = title;
+      }
+
+      // create employee objects
+      var employees = [
+        //1 Thomas Edison Software Engineer
+        new employee(1, "Thomas", "Edison", "Software Engineer"),
+
+        //2 Benjamin Franklin Programmer
+        new employee(2, "Benjamin", "Franklin", "Programmer"),
+
+        //3 Nikola Tesla Project Manager
+        new employee(3, "Nikola", "Tesla", "Project Manager"),
+
+        //4 Charles Babbage Product Manager
+        new employee(4, "Charles", "Babbage", "Product Manager"),
+
+        //5 Alexander Bell Business Analyst
+        new employee(5, "Alexander", "Bell", "Business Analyst")
+      ];
+
+      // Create a getEmployee() function that accepts an id argument, iterates over the employee's array,
+      // and outputs the matched employee record using a JavaScript alert box.
+      function getEmployee(id){
+        for (var i = 0; i < employees.length; i++) {
+          if (employees[i].id === id) {
+            alert(
+              employees[i].id + ' ' +
+              employees[i].firstName + ' ' +
+              employees[i].lastName + ' '+
+              employees[i].title
+            );
+          }
+        }
+      };
+
+      // Create a string variable named "output" and build an HTML table.
+      var output = "<table id='employee'>";
+
+      //Iterate over the employee's array and append each employee property using the <td> td> tag
+      output += "<thead><tr><th>ID</th><th>First Name</th><th>Last Name</th><th>Title</th></tr></thead>";
+        for(var i = 0; i < employees.length; i++){
+          output += "<tbody><tr>";
+            output += "<td>" + employees[i].id + "</td>";
+            output += "<td>" + employees[i].firstName + "</td>";
+            output += "<td>" + employees[i].lastName + "</td>";
+            output += "<td>" + employees[i].title + "</td>";
+          output += "</tr></tbody>";
+          }
+        output += "</table>";
+
+      //Assign the output string to the "emps" through the innerHTML function.
+      document.getElementById("emps").innerHTML = output;
+
+      $(function () {
+        //Register an onClick event for $("table tr")
+        $("table tr").click(function (event) {
+          //call the find('td:first').html() function
+          var selected = $(this).find('td:first').html();
+          //Using the getEmployee() function find the selected employee object and output the results
+          getEmployee(selected);
+        });
+      });
+    </script>
+  </body>
+</html>
